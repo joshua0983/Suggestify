@@ -97,6 +97,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Data files
+data/*.csv
+
 # Editor directories and files
 .vscode/
 .idea/
