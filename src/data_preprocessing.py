@@ -48,9 +48,7 @@ def combine_features(item_features, item_popularity):
 if __name__ == "__main__":
     start_time = time.time()
     
-    print("Starting to load datasets...")
     events, category_tree, item_properties_part1, item_properties_part2 = load_datasets()
-    print("Datasets loaded.")
     
     print("Starting to combine item properties...")
     item_properties = combine_item_properties(item_properties_part1, item_properties_part2)
