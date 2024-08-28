@@ -1,5 +1,6 @@
 import pandas as pd
 import time
+from sklearn.model_selection import train_test_split
 
 def load_datasets():
     start_time = time.time()
@@ -68,5 +69,9 @@ if __name__ == "__main__":
     combined_item_data = combine_features(item_features, item_popularity)
     print("Features combined.")
     
+    print("Starting to split data into training and testing sets...")
+    train_data, test_data = train_test_split(combined_item_data, test_size=0.2, random_state=42)
+    print(f"Training set size: {train_data.shape}")
+    print(f"Testing set size: {test_data.shape}")
+    
     print(f"Total execution time: {time.time() - start_time:.2f} seconds")
-    print(combined_item_data.head())
