@@ -50,9 +50,7 @@ if __name__ == "__main__":
     
     events, category_tree, item_properties_part1, item_properties_part2 = load_datasets()
     
-    print("Starting to combine item properties...")
     item_properties = combine_item_properties(item_properties_part1, item_properties_part2)
-    print("Item properties combined.")
     
     print("Starting to preprocess item properties...")
     item_properties = preprocess_item_properties(item_properties)
